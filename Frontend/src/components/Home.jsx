@@ -1,5 +1,3 @@
-
-// src/components/Home.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PostCard from './PostCard';
@@ -13,7 +11,7 @@ function Home() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/posts');
+      const res = await axios.get('https://communityx-9e14.onrender.com/api/posts');
       setPosts(res.data);
     } catch (err) {
       console.error(err);
@@ -23,7 +21,7 @@ function Home() {
   const fetchProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:3000/api/posts/me', {
+      const res = await axios.get('https://communityx-9e14.onrender.com/api/posts/me', {
         headers: { 'x-auth-token': token }
       });
       setProfile(res.data.user);

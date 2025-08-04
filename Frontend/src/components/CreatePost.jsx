@@ -1,5 +1,3 @@
-
-// src/components/CreatePost.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -16,7 +14,7 @@ function CreatePost({ onPostCreated }) {
     }
     try {
       await axios.post(
-        'http://localhost:3000/api/posts',
+        'https://communityx-9e14.onrender.com/api/posts',
         { text },
         {
           headers: { 'x-auth-token': token }

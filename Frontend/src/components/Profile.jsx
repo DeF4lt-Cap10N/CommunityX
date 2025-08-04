@@ -17,11 +17,11 @@ function Profile() {
         let res;
         
         if (userId === 'me') {
-          res = await axios.get('http://localhost:3000/api/posts/me', {
+          res = await axios.get('https://communityx-9e14.onrender.com/api/posts/me', {
             headers: { 'x-auth-token': token }
           });
         } else {
-          res = await axios.get(`http://localhost:3000/api/posts/user/${userId}`);
+          res = await axios.get(`https://communityx-9e14.onrender.com/api/posts/user/${userId}`);
         }
 
         setProfileData(res.data);

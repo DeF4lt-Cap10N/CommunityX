@@ -15,7 +15,7 @@ function Login() {
   const onSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/login', formData);
+      const res = await axios.post('https://communityx-9e14.onrender.com/api/auth/login', formData);
       localStorage.setItem('token', res.data.token);
       navigate('/');
     } catch (err) {
